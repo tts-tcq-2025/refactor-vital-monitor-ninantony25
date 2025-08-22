@@ -37,6 +37,7 @@ int vitalsOk(float temperature, float pulseRate, float spo2){
   return 1;
 }*/
 
+#include "./monitor.h"
 #include <iostream>
 #include <thread>
 #include <chrono>
