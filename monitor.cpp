@@ -5,7 +5,7 @@
 #include <iostream>
 using std::cout, std::flush, std::this_thread::sleep_for, std::chrono::seconds;
 
-int vitalsOk(float temperature, float pulseRate, float spo2) {
+int vitalsOk(float temperature, float pulseRate, float spo2){
   if (temperature > 102 || temperature < 95) {
     cout << "Temperature is critical!\n";
     for (int i = 0; i < 6; i++) {
