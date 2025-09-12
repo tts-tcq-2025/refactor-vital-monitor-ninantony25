@@ -2,15 +2,11 @@
 #ifndef MONITOR_H
 #define MONITOR_H
 
-enum class VitalStatus 
-{
-  OK,
-  TemperatureCritical,
-  PulseRateOutOfRange,
-  Spo2OutOfRange
-};
+int spo2Ok(int spo2);
+int tempOk(float temperature);
+int pulseRateOk(int pulse);
 
-VitalStatus checkVitals(float temperature, float pulseRate, float spo2);
-void alert(VitalStatus status);
+// Declare combined vital check
+int vitalsOk(float temperature, int pulseRate, int spo2);
 
 #endif
