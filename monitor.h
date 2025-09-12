@@ -1,12 +1,12 @@
 #pragma once
 
-enum class VitalStatus {
-    OK,
-    TemperatureCritical,
-    PulseRateOutOfRange,
-    OxygenSaturationOutOfRange
+enum class VitalStatus 
+{
+  OK,
+  TemperatureCritical,
+  PulseRateOutOfRange,
+  Spo2OutOfRange
 };
 
 VitalStatus checkVitals(float temperature, float pulseRate, float spo2);
-
-int vitalsOk(float temperature, float pulseRate, float spo2);
+void alert(VitalStatus status);
